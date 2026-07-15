@@ -1,0 +1,53 @@
+1.Write a lambda function that returns the cube of a number.
+2/Write a lambda function that checks whether a number is even or odd (return "Even" or "Odd").
+
+3.Given:
+
+employees = [
+    {"name": "Ali", "salary": 50000},
+    {"name": "Sara", "salary": 70000},
+    {"name": "Ahmed", "salary": 60000}
+]
+
+Sort the list by salary using a lambda.
+
+4.Create a lambda that takes three numbers and returns the largest.
+
+5.Given:
+
+words = ["python", "qa", "selenium", "ai"]
+
+Sort the words by their length using a lambda.
+
+SOLUTION--------------------------------------------------------------------------------------------------
+#1
+cube=lambda x:x*x*x
+print(cube(2))
+#2
+checkit=lambda x:"Even" if x%2==0 else "Odd"
+print(checkit(5))
+print(checkit(4))
+#3
+employees = [
+    {"name": "Ali", "salary": 50000},
+    {"name": "Sara", "salary": 70000},
+    {"name": "Ahmed", "salary": 60000}
+]
+list1=list(sorted(employees,key=lambda emp:emp["salary"]))
+print(list1)
+#4
+largest=lambda x,y,z:x if x>=y and x>=z else y if y>=x and y>=z else z
+print(largest(5,3,7))
+#5
+words = ["python", "qa", "selenium", "ai"]
+for i in range (0,len(words)):
+    for j in range(i+1,len(words)):
+        if(len(words[i])>len(words[j])):
+            temp=words[i]
+            words[i]=words[j]
+            words[j]=temp
+
+print(words)
+#using lambda
+words.sort(key=lambda x:len(x))
+print(words)
