@@ -1,0 +1,43 @@
+#Practice Questions
+#Q1
+
+#Keep only even numbers.
+
+numbers = [3,8,12,5,17,20]
+numbers=list(filter(lambda x:x%2==0,numbers))
+print(numbers)
+#Expected output
+
+#[8,12,20]
+#Q2
+
+#Keep only names whose length is greater than 4.
+
+names = ["Ali","Ahmed","Sara","Hassan","Noor"]
+names=list(filter(lambda x:len(x)>4,names))
+print(names)
+#Expected output
+
+#["Ahmed","Hassan"]
+#Q3
+
+#Remove empty strings.
+
+words = ["Python","","QA","","AI","Testing"]
+words=list(filter( bool,words))
+print(words)
+#Expected output
+
+#["Python","QA","AI","Testing"]
+#Q4
+
+#Given:
+
+marks = [45,82,90,33,70,58]
+
+#Keep only students who passed (marks >= 50).
+marks=list(filter(lambda m:m>=50,marks))
+print(marks)
+#Expected output
+
+#[82,90,70,58]
