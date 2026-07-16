@@ -1,0 +1,16 @@
+#1
+square=[x*x for x in [1,2,3,4,5]]
+print(square)
+#2
+numbers = [3,8,12,5,17,20]
+print(["Even" if x%2==0 else "Odd" for x in numbers])
+#3length of each word
+words = ["Python","QA","Automation","AI"]
+print([len(x) for x in words])
+
+#4 multiply by 2, of evens
+numbers = [1,2,3,4]
+
+result = [x*2 if x%2==0 else x for x in numbers if x>1]
+
+print(result)
