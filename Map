@@ -1,0 +1,32 @@
+#Q1
+#Convert the following list of strings into integers using map():
+numbers = ["10", "20", "30", "40"]
+numbers=list(map(int,numbers))
+print(numbers)
+#Q2
+#Convert all names to uppercase using map():
+
+names = ["ali", "sara", "ahmed", "zara"]
+names=list(map(lambda x:x.upper(),names))
+#or   names=list(map(str.upper,names))
+print(names)
+
+#Q3
+#Using map() and a lambda, create a new list containing the squares of:
+numbers = [2, 4, 6, 8]
+numbers=list(map(lambda x:x*2,numbers))
+print(numbers)
+
+#Q4  Given:
+prices = ["100", "250", "80", "450"]
+tax = [10, 20, 5, 50]
+#Use map() with two iterables to calculate:
+#price + tax
+total=list(map(lambda x,y:int(x)+y,prices,tax))
+print(total)
+
+#Q5
+#What will this code print, and why?
+result = map(lambda x: x * 2, [1, 2, 3])
+print(list(result))#iterators moves and print
+print(list(result))#[] bcz iterator is at end already
