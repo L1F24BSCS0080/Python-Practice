@@ -1,0 +1,82 @@
+#iterator   manual iterator
+nums=[1,2,3,4,5]
+it=iter(nums)
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+# generator   auto iterator
+#iterator move to yield values/points
+def square(n):
+    a=0
+    for i in range(n):
+        yield (a*a)
+        a+=1
+def febo(n):
+    a=0
+    b=1
+    for _ in range(n):
+        yield a
+        a,b=b,a+b
+        
+for x in febo(8):
+    print(x,end="")
+print()
+
+for x in square(5):
+    print(x,end="");
+    
+# closure
+#inner function rembers outer fubnction variables
+
+#outer runs and returns inner and when returend inner
+#get called it knows outer structure so uses outer variables
+def power(p):
+    
+    def calpower(n):
+        x=1 
+        for i in range(p):
+            x=x*n
+        print(y)
+        return x
+    y="hi"
+    return calpower
+calpowe=power(4)
+print("\npower and colosure function")
+print(calpowe(3))
+
+
+#decorator
+#act as a wrapper on a function
+#use case= find execution time
+import time
+def timer(func):
+     def wrapper(*args,**kwargs):
+         before=time.time()
+         result=func(*args,**kwargs)
+         after=time.time()
+         print("execution time:",after-before)
+         return result
+     return wrapper
+@timer
+def calculate():
+    total = 0
+
+    for i in range(1000000):
+        total += i
+
+calculate()
+
+def dec(func):
+    def wrapper(hi):
+        print("staring function")
+        func(hi)
+        print("ending function")
+    return wrapper
+@dec
+def greet(hi):
+    print("welcome ASAD")
+    
+greet("asad")
+        
