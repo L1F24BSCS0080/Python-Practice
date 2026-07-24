@@ -1,0 +1,18 @@
+from numpy import random as rd
+#random number
+print(rd.randint(10))
+#random points 0-1
+print(rd.rand(2))
+#random 1D array
+print(rd.randint(10,size=(5)))
+#random 2D array
+print(rd.randint(10,size=(5,3)))
+#random point 2 d array
+#range is known automatically 0-1
+print(rd.rand(2,4))
+#random number from own choice
+print(rd.choice([9,8,7,0]))
+#random array using choice
+print(rd.choice([9,8,7,0],size=(6)))
+#random 2d array using choice
+print(rd.choice([9,8,7,0],size=(3,2)))
